@@ -6,24 +6,24 @@ export function Header() {
     <header className="mb-16 space-y-4">
       <h1 className="text-4xl font-bold mb-4 animate-fade-in text-white">
         <span className="inline-block">
-          <ScrambleText text="shoubhit dash" />
+          <ScrambleText text="aryan" />
         </span>
       </h1>
       <div className="flex flex-col gap-2 text-gray-400">
         <div className="flex items-center gap-2">
           <MapPin className="w-4 h-4" />
-          chennai, india
+          🇮🇳/🇺🇸
         </div>
         <div className="flex items-center gap-2">
           <Building2 className="w-4 h-4" />
-          co-founder and cto @ mocha
+          co-founder <a href="https://sendai.fun" target="_blank" rel="noopener noreferrer">@sendai.fun</a>
         </div>
       </div>
       <p className="leading-relaxed animate-fade-in-up">
-        i&apos;m a 20 y/o cs undergrad student. i love building things and
-        solving problems. i enjoy language design, theoretical computer science
-        and i live on the terminal. if i&apos;m not coding, i&apos;m probably
-        doing cardistry, watching movies or obsessing over mechanical keyboards.
+        currently 22 y/o. being building cool things since 17. i beleive in 
+        increasing the luck surface area, and helping others do the same.
+        i've flown drones into air at 19, and satellites into space at 20.
+        now, building at intersection of the two most justifiably hyped fields in tech, crypto x ai.
       </p>
     </header>
   )

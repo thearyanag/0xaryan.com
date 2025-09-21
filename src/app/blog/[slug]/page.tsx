@@ -23,10 +23,10 @@ export async function generateMetadata({ params }: PageProps) {
       description: post.metadata.description,
       publishedTime,
       type: "article",
-      url: `https://www.nexxel.dev/blog/${post.slug}`,
+      url: `https://www.0xaryan.com/blog/${post.slug}`,
       images: [
         {
-          url: `https://www.nexxel.dev/og/blog?title=${post.metadata.title}`,
+          url: `https://www.0xaryan.com/og/blog?title=${post.metadata.title}`,
         },
       ],
     },
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: PageProps) {
       card: "summary_large_image",
       creator: "@nexxeln",
       images: [
-        `https://www.nexxel.dev/og/blog?title=${post.metadata.title}&top=${publishedTime}`,
+        `https://www.0xaryan.com/og/blog?title=${post.metadata.title}&top=${publishedTime}`,
       ],
     },
   }
@@ -62,13 +62,13 @@ export default async function Post({ params }: PageProps) {
             datePublished: post.metadata.date,
             dateModified: post.metadata.date,
             description: post.metadata.description,
-            image: `https://nexxel.dev/og/blog?title=${
+            image: `https://0xaryan.com/og/blog?title=${
               post.metadata.title
             }&top=${formatDate(post.metadata.date)}`,
-            url: `https://nexxel.dev/blog/${post.slug}`,
+            url: `https://0xaryan.com/blog/${post.slug}`,
             author: {
               "@type": "Person",
-              name: "Shoubhit Dash",
+              name: "0xaryan",
             },
           }),
         }}

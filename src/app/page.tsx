@@ -5,52 +5,43 @@ import { LinksSection } from "@/components/links-section"
 
 const workItems: Item[] = [
   {
-    title: "mocha",
-    role: "co-founder and cto",
-    period: "jul 2025 - present",
-    description: "building an ai native email client designed for speed and ease of use",
-    href: "https://mocha.email",
-  },
-  {
-    title: "ENS labs",
-    role: "software engineer",
-    period: "feb 2025 - jul 2025",
-    description:
-      "helped migrate ensjs to namechain and optimized ci for the manager app",
-    href: "https://ens.domains",
-  },
-  {
-    title: "leapflow",
-    role: "co-founder and cto",
-    period: "may 2024 - jun 2025",
-    description:
-      "headed engineering to develop ai agents that automate repetitive workflows in existing software",
-    href: "https://leapflow.tech",
-  },
-  {
-    title: "dimension",
-    role: "full-stack engineer",
-    period: "nov 2023 - jan 2024",
-    description:
-      "contributed to a large-scale t3 stack app. worked on real-time presence and chat features",
-    href: "https://dimension.dev",
-  },
+    title: "sendai.fun",
+    role: "co-founder",
+    period: "dec 2024 - present",
+    description: "changing way how people use crypto",
+    href: "https://sendai.fun",
+  }
 ]
 
 const projectItems = [
   {
-    title: "create-t3-app",
-    role: "creator and maintainer",
+    title: "solana-agent-kit",
+    role: "creator",
     description:
-      "open-source project for initializing full-stack next.js apps. 24k+ stars, 200+ contributors",
-    href: "https://create.t3.gg",
+      "connect any ai agent to any protocol, on solana",
+    href: "kit.sendai.fun",
   },
   {
-    title: "mini-git",
+    title: "solana-mcp",
     role: "creator",
-    description: "simplified version of git from scratch",
-    href: "https://github.com/nexxeln/mini-git",
+    description:
+      "server for interacting with solana, powered by the solana agent kit",
+    href: "https://github.com/sendaifun/solana-mcp",
   },
+  {
+    title: "telegram-solana-starter-kit",
+    role: "creator",
+    description:
+      "mini apps with phantom wallet with 95% ai written code as of august 2024",
+    href: "https://x.com/_0xaryan/status/1832442755097698650",
+  },
+  {
+    title: "solana-mobile-blinks-expo-template",
+    role: "creator",
+    description:
+      "integrate blins with solana mobile",
+    href: "https://x.com/_0xaryan/status/1839606598135587093",
+  }
 ]
 
 export default function HomePage() {

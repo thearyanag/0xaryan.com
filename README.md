@@ -1,3 +1,5 @@
 <samp>
-stack: next.js, tailwindcss, typescript, mdx, vercel
+personal blog
+
+s/o to https://www.nexxel.dev for the template
 </samp>
