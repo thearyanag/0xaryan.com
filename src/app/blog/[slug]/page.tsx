@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps) {
       title: post.metadata.title,
       description: post.metadata.description,
       card: "summary_large_image",
-      creator: "@nexxeln",
+      creator: "@_0xaryan",
       images: [
         `https://www.0xaryan.com/og/blog?title=${post.metadata.title}&top=${publishedTime}`,
       ],
