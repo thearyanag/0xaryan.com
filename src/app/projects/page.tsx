@@ -4,90 +4,55 @@ import { Metadata } from "next"
 
 const projects = [
   {
-    title: "create-t3-app",
+    title: "solana-agent-kit",
     description:
-      "cli tool to bootstrap full-stack type-safe next.js applications",
-    role: "creator and maintainer",
-    period: "jun 2022 - present",
+      "connect any ai agent to any protocol, on solana",
+    role: "creator",
+    period: "dec 2024 - present",
     achievements: [
-      "grew project to 24k+ github stars",
-      "wrote education blog posts with over 100k views",
-      "maintained comprehensive, up-to-date documentation",
+      "120K+ npm downloads, 1.5K+ stars, 800+ forks, 79+ contributors",
     ],
     technologies: [
-      "typescript",
-      "next.js",
-      "trpc",
-      "prisma",
-      "tailwind css",
-      "auth.js",
+      "typescript", "solana", "ai", "agentic", "mcp",
     ],
-    href: "https://create.t3.gg",
+    href: "kit.sendai.fun",
   },
   {
-    title: "mini-git",
-    description: "a simplified implementation of git built from scratch",
+    title: "solana-mcp",  
+    description: "server for interacting with solana, powered by the solana agent kit",
     role: "creator",
-    period: "jul 2024",
+    period: "mar 2025",
     achievements: [
-      "successfully implemented core git commands",
-      "implemented efficient blob storage and compression",
-      "learned about git's internal object model and data structures like merkle trees",
+      "125+ stars, 40+ forks",
+      "can create a solana mcp server for any protocol",
     ],
-    technologies: ["go", "sha-1"],
-    href: "https://github.com/nexxeln/mini-git",
+    technologies: ["mcp", "typescript"],
+    href: "https://github.com/sendaifun/solana-mcp",
   },
   {
-    title: "license-generator",
-    description: "cli tool to create licenses for your projects",
-    role: "creator and maintainer",
-    period: "mar 2022 - present",
-    achievements: [
-      "grew project to over 3.2k downloads",
-      "built a robust cli interface with fuzzy search",
-      "added support for all github licenses with auto-filling",
-    ],
-    technologies: ["rust", "github api"],
-    href: "https://github.com/nexxeln/license-generator",
-  },
-  {
-    title: "spotify-voice-control",
-    description: "voice control for spotify through the terminal",
+    title: "telegram-solana-starter-kit",
+    description: "mini apps with phantom wallet with 95% ai written code as of august 2024",
     role: "creator",
-    period: "feb 2022",
+    period: "sept 2024",
     achievements: [
-      "integrated spotify web api for seamless, real-time music control",
-      "built voice command system for comprehensive music control including playback, search, and playlist management",
+      "45+ stars, 17 forks",
+      "122K+ views, 600+ likes"
     ],
-    technologies: ["python", "spotify api"],
-    href: "https://github.com/nexxeln/spotify-voice-control",
+    technologies: ["telegram", "phantom", "ai"],
+    href: "https://x.com/_0xaryan/status/1832442755097698650",
   },
   {
-    title: "text2regex",
-    description:
-      "convert natural language text into validated regular expressions",
+    title: "solana-mobile-blinks-expo-template",
+    description: "integrate blinks with solana mobile",
     role: "creator",
-    period: "jul 2024",
+    period: "sept 2024",
     achievements: [
-      "implemented a self-correcting llm-powered regex generator",
-      "built a easy-to-use cli to generate regex patterns",
+      "integrated blinks with solana mobile",
+      "37K+ views, 110+ likes"
     ],
-    technologies: ["typescript", "openai"],
-    href: "https://github.com/nexxeln/text2regex",
-  },
-  {
-    title: "fp_",
-    description: "a functional programming library for typescript",
-    role: "creator",
-    period: "feb 2023",
-    achievements: [
-      "implemented a comprehensive set of functional programming constructs",
-      "wrote documentation and examples to help developers understand and use the library",
-      "published to deno package registry",
-    ],
-    technologies: ["typescript"],
-    href: "https://github.com/nexxeln/fp",
-  },
+    technologies: ["blinks", "solana mobile"],
+    href: "https://x.com/_0xaryan/status/1839606598135587093",
+  }
 ]
 
 export default function ProjectsPage() {
