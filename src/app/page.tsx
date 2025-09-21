@@ -39,7 +39,7 @@ const projectItems = [
     title: "solana-mobile-blinks-expo-template",
     role: "creator",
     description:
-      "integrate blins with solana mobile",
+      "integrate blinks with solana mobile",
     href: "https://x.com/_0xaryan/status/1839606598135587093",
   }
 ]
