@@ -48,8 +48,17 @@ function CustomLink({
   return <a href={href} target="_blank" rel="noopener noreferrer" {...props} />
 }
 
-function CustomImage(props: React.ImgHTMLAttributes<HTMLImageElement>) {
-  return <img alt={props.alt} className="rounded-lg" {...props} />
+function CustomImage({ title, alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) {
+  if (title) {
+    return (
+      <figure className="not-prose my-6">
+        <img alt={alt} className="rounded-lg mx-auto" {...props} />
+        <figcaption className="mt-2 text-center text-sm text-gray-400">{title}</figcaption>
+      </figure>
+    )
+  }
+
+  return <img alt={alt} className="rounded-lg" {...props} />
 }
 
 async function Pre({

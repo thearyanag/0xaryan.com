@@ -10,7 +10,9 @@ solana tx, happens in slots which compose blocks.
 
 slots have limit of 60M CU, and most of the times slots are underutlised. currently as of 3rd oct 2025, slots are getting utlised on avergage 35% 
 
-that leaves room for 65% of CU to be filled, leading to an in-efficiency to be filled. 
+that leaves room for 65% of CU to be filled, leading to an in-efficiency to be filled.
+
+![slot cu's](/assets/slot-cu.png "Slot Cu's")
 
 bam comes into picture here
 
@@ -40,6 +42,7 @@ how it ties up?
 ### router
 
 - role of router is to check the tx [ programId, ixs, data, args ] and decide where to send the tx based on programId and plugin. 
+- only whitelisted ixs are not sent to the plugn, while rest are, allowing to add new ixs to program without modifying the plugin
 
 exmaple scenaior on how all of above ties together: 
 
@@ -49,6 +52,8 @@ some big news floats around
 $SOL instantly surges to 155$ 
 before MM could cancle the quote, a buyer sends an order to buy at 150$ with higher fees and get's his tx included first. 
 buyer makes 5$/share profit, MM at loss 
+
+![bam](/assets/bam-trade.png)
 
 before bam
 ```
@@ -75,3 +80,9 @@ T+25ms:  Order fails - quote no longer exists
 ```
 
 ibrl + ace ftw 
+
+
+sources
+1. https://bam.dev/blog/understanding-bam/
+2. https://forum.bam.dev/t/brainstorming-paths-to-ace-on-bam/28
+3. https://www.anza.xyz/blog/the-internet-capital-markets-roadmap
