@@ -1,0 +1,79 @@
+---
+title: "bam x ace x speedbump"
+description: "ibrl"
+date: "Oct 3, 2025"
+---
+
+# bam and ace
+
+solana tx, happens in slots which compose blocks.
+
+1 slot is of ~400ms 
+
+slots have limit of 60M CU, and most of the times slots are underutlised. currently as of 3rd oct 2025, slots are getting utlised on avergage 35% 
+
+that leaves room for 65% of CU to be filled, leading to an in-efficiency to be filled. 
+
+bam comes into picture here
+
+if we take 1 slot and divide it into smaller slices of 50ms each [ 50ms x 8 = 400ms ], and linearly fill those slices depending on txs demand 
+rather than bursting some slots and leaving some slots based on an auction mechanism which happens at start of each 50ms and based on that 
+order the tx in a slot then this in-efficiency could be reduced by a lot. 
+
+++ the main validator should just handle tx processing and not worry about order of the txs. so bam also gives a way to cryptographically verify the order
+of the txs and whether the order is same as auction or not, thus enabling trust factor. 
+
+## in action 
+
+### plugins 
+
+- custom logic written by application 
+- application can decide how the tx going through there protocol should flow 
+
+example `speedbump`
+
+### speedbump plugin
+
+a simple plugin which adds whitelisted tx's to a mempool to be executed at pre-decided delayed time, this happens inside a slice [ 50ms ] and delay can 
+be from 10ms to 50ms, in steps of 1ms giving fine-grained control over tx flow
+
+how it ties up?
+
+### router
+
+- role of router is to check the tx [ programId, ixs, data, args ] and decide where to send the tx based on programId and plugin. 
+
+exmaple scenaior on how all of above ties together: 
+
+a MM posts a quote, $SOL sell at 150$, waiting for it to get executed
+$SOL is trading at 144$
+some big news floats around
+$SOL instantly surges to 155$ 
+before MM could cancle the quote, a buyer sends an order to buy at 150$ with higher fees and get's his tx included first. 
+buyer makes 5$/share profit, MM at loss 
+
+before bam
+```
+T+0ms:   News breaks, price should be $155
+T+5ms:   MM sends cancel for $150 quote
+T+5ms:   Aggressive taker sends order to buy at $150
+T+10ms:  Both arrive at scheduler
+T+10ms:  taker gets filled, MM loses money
+```
+
+after bam + speedbump
+```
+T+0ms:   News breaks, price should be $155
+T+5ms:   MM sends cancel for $150 quote
+         → Router: No speedbump (negative marker match)
+         → Immediately to scheduler at T+5ms
+T+5ms:   Aggressive taker sends order to buy at $151
+         → Router: Speedbump triggered!
+         → Held in speedbump pool until T+25ms
+T+5ms:   MM's cancel executes, removes $151 quote
+T+25ms:  Taker's order finally reaches scheduler
+T+25ms:  Order fails - quote no longer exists
+         MM protected!
+```
+
+ibrl + ace ftw 

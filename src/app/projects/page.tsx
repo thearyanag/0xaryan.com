@@ -15,7 +15,7 @@ const projects = [
     technologies: [
       "typescript", "solana", "ai", "agentic", "mcp",
     ],
-    href: "kit.sendai.fun",
+    href: "https://kit.sendai.fun",
   },
   {
     title: "solana-mcp",  

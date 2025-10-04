@@ -16,7 +16,7 @@ export function Header() {
         </div>
         <div className="flex items-center gap-2">
           <Building2 className="w-4 h-4" />
-          co-founder <a href="https://sendai.fun" target="_blank" rel="noopener noreferrer">@sendai.fun</a>
+          co-founder & cto <a href="https://sendai.fun" target="_blank" rel="noopener noreferrer">@sendai.fun</a>
         </div>
       </div>
       <p className="leading-relaxed animate-fade-in-up">

@@ -6,9 +6,9 @@ import { LinksSection } from "@/components/links-section"
 const workItems: Item[] = [
   {
     title: "sendai.fun",
-    role: "co-founder",
+    role: "co-founder & cto",
     period: "dec 2024 - present",
-    description: "changing way how people use crypto",
+    description: "prompt anything crypto.",
     href: "https://sendai.fun",
   }
 ]
@@ -19,7 +19,7 @@ const projectItems = [
     role: "creator",
     description:
       "connect any ai agent to any protocol, on solana",
-    href: "kit.sendai.fun",
+    href: "https://kit.sendai.fun",
   },
   {
     title: "solana-mcp",
