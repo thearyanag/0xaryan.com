@@ -20,10 +20,6 @@ export function Posts({ posts }: PostsProps) {
     item.metadata.title.toLowerCase().includes(searchQuery.toLowerCase()),
   )
 
-  useEffect(() => {
-    setSelectedIndex(0)
-  }, [searchQuery])
-
   const scrollSelectedIntoView = () => {
     if (selectedItemRef.current) {
       selectedItemRef.current.scrollIntoView({
@@ -41,6 +37,7 @@ export function Posts({ posts }: PostsProps) {
       } else if (e.key === "Escape" && isSearching) {
         setIsSearching(false)
         setSearchQuery("")
+        setSelectedIndex(0)
         document.activeElement instanceof HTMLElement &&
           document.activeElement.blur()
       } else if (
@@ -89,7 +86,10 @@ export function Posts({ posts }: PostsProps) {
             <input
               type="text"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value)
+                setSelectedIndex(0)
+              }}
               className="flex-1 bg-transparent outline-none"
               autoFocus
               placeholder="search posts..."

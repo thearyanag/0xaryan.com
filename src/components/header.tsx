@@ -22,7 +22,7 @@ export function Header() {
       <p className="leading-relaxed animate-fade-in-up">
         22 y/o. building cool things since 17. i beleive in 
         increasing the luck surface area, and helping others do the same.
-        i've flown drones into air at 19, and satellites into space at 20.
+        i&apos;ve flown drones into air at 19, and satellites into space at 20.
         now, building at intersection of the two most justifiably hyped fields in tech, crypto x ai.
       </p>
     </header>

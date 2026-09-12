@@ -64,7 +64,7 @@ export default function ProjectsPage() {
       </h1>
 
       <p className="text-gray-400 mb-12 leading-relaxed">
-        some projects i've worked on. 
+        some projects i&apos;ve worked on.
       </p>
 
       <div className="space-y-12">

@@ -4,12 +4,12 @@ import { Children, createElement, isValidElement } from "react"
 import { codeToHtml } from "shiki"
 
 function Table({ data }: { data: { headers: string[]; rows: string[][] } }) {
-  let headers = data.headers.map((header, index) => (
+  const headers = data.headers.map((header, index) => (
     <th key={index} className="p-2 text-left">
       {header}
     </th>
   ))
-  let rows = data.rows.map((row, index) => (
+  const rows = data.rows.map((row, index) => (
     <tr key={index}>
       {row.map((cell, cellIndex) => (
         <td key={cellIndex} className="p-2 text-left">
@@ -59,6 +59,17 @@ function CustomImage({ title, alt, ...props }: React.ImgHTMLAttributes<HTMLImage
   }
 
   return <img alt={alt} className="rounded-lg" {...props} />
+}
+
+function Paragraph({ children, ...props }: React.ComponentProps<"p">) {
+  const hasImage = Children.toArray(children).some(
+    (child) => isValidElement(child) && child.type === CustomImage,
+  )
+
+  // Captioned images render figures, which cannot be nested inside paragraphs.
+  if (hasImage) return <div {...props}>{children}</div>
+
+  return <p {...props}>{children}</p>
 }
 
 async function Pre({
@@ -128,6 +139,7 @@ function createHeading(level: number) {
 }
 
 const components = {
+  p: Paragraph,
   a: CustomLink,
   img: CustomImage,
   h1: createHeading(1),
@@ -140,7 +152,7 @@ const components = {
   Table,
 }
 
-export function MDX(props: any) {
+export function MDX(props: React.ComponentProps<typeof MDXRemote>) {
   return (
     <MDXRemote
       {...props}
