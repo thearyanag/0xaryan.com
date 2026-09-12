@@ -66,7 +66,13 @@ export function Posts({ posts }: PostsProps) {
           return newIndex
         })
       } else if (isSearching && e.key === "Enter" && filteredPosts.length > 0) {
-        router.push(`/blog/${filteredPosts[selectedIndex].slug}`)
+        const selected = filteredPosts[selectedIndex]
+        const externalUrl = selected.metadata.url
+        if (externalUrl) {
+          window.open(externalUrl, "_blank")
+        } else {
+          router.push(`/blog/${selected.slug}`)
+        }
       }
     }
 

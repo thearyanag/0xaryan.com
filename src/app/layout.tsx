@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     default: "0xaryan",
     template: "%s | 0xaryan",
   },
-  description: "reducing information arbitrage",
+  description: "reducing asymmetrical edges",
   openGraph: {
     title: "0xaryan",
-    description: "reducing information arbitrage",
+    description: " reducing asymmetrical edges",
     url: "https://www.0xaryan.com",
     siteName: "0xaryan",
     locale: "en_US",

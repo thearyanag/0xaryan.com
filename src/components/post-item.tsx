@@ -7,6 +7,8 @@ type PostItemProps = {
 }
 
 export function PostItem({ post, isSelected }: PostItemProps) {
+  const isExternal = Boolean(post.metadata.url)
+  const href = isExternal ? (post.metadata.url as string) : `/blog/${post.slug}`
   return (
     <div
       className={`flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group ${
@@ -16,8 +18,10 @@ export function PostItem({ post, isSelected }: PostItemProps) {
       }`}
     >
       <Link
-        href={`/blog/${post.slug}`}
+        href={href}
         prefetch={true}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
         className="text-gray-200 hover:text-accent transition-colors duration-200"
       >
         {post.metadata.title.toLowerCase()}

@@ -16,11 +16,11 @@ export function Header() {
         </div>
         <div className="flex items-center gap-2">
           <Building2 className="w-4 h-4" />
-          co-founder & cto <a href="https://sendai.fun" target="_blank" rel="noopener noreferrer">@sendai.fun</a>
+          operator <a href="https://sendai.fun" target="_blank" rel="noopener noreferrer">@sendai.fun</a>
         </div>
       </div>
       <p className="leading-relaxed animate-fade-in-up">
-        currently 22 y/o. being building cool things since 17. i beleive in 
+        22 y/o. building cool things since 17. i beleive in 
         increasing the luck surface area, and helping others do the same.
         i've flown drones into air at 19, and satellites into space at 20.
         now, building at intersection of the two most justifiably hyped fields in tech, crypto x ai.

@@ -20,8 +20,10 @@ export function BlogSection() {
         {posts.map((post, index) => (
           <div key={index} className="flex justify-between items-center group">
             <Link
-              href={`/blog/${post.slug}`}
+              href={post.metadata.url ? post.metadata.url : `/blog/${post.slug}`}
               className="text-gray-200 hover:text-accent transition-colors duration-200"
+              target={post.metadata.url ? "_blank" : undefined}
+              rel={post.metadata.url ? "noopener noreferrer" : undefined}
             >
               {post.metadata.title.toLowerCase()}
             </Link>

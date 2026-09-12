@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation"
 import { MDX } from "./mdx"
 import { getPostBySlug } from "@/lib/blog"
+import { OpenExternal } from "@/components/open-external"
 
 type PageProps = {
   params: Promise<{ slug: string }>
@@ -47,6 +48,14 @@ export default async function Post({ params }: PageProps) {
   const post = getPostBySlug(slug)
   if (!post) {
     notFound()
+  }
+
+  if (post.metadata.url) {
+    return (
+      <section className="animate-fade-in-up">
+        <OpenExternal url={post.metadata.url} fallbackPath="/blog" />
+      </section>
+    )
   }
 
   return (
