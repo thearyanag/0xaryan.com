@@ -6,9 +6,10 @@ import { LinksSection } from "@/components/links-section"
 const workItems: Item[] = [
   {
     title: "sendai.fun",
-    role: "operator",
-    period: "dec 2024 - present",
-    description: "reducing asymmetrical edges for everyone.",
+    role: "co-founder & cto",
+    period: "dec 2024 - sep 2026",
+    description:
+      "created solana agent kit and solana mcp. built suzi’s trading and autonomous-agent platform, from the user experience to execution infrastructure.",
     href: "https://sendai.fun",
   }
 ]
