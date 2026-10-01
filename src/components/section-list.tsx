@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
+import type { ReactNode } from "react"
 
 export type Item = {
   title: string
@@ -12,6 +13,7 @@ export type Item = {
 type SectionListProps = {
   title: string
   items: Item[]
+  children?: ReactNode
   viewAllHref?: string
   viewAllText?: string
 }
@@ -19,6 +21,7 @@ type SectionListProps = {
 export function SectionList({
   title,
   items,
+  children,
   viewAllHref,
   viewAllText,
 }: SectionListProps) {
@@ -27,6 +30,7 @@ export function SectionList({
       <h2 className="text-2xl font-bold mb-6 flex items-center text-white">
         <span className="text-accent mr-2">*</span> {title}
       </h2>
+      {children}
       <div className="space-y-8">
         {items.map((item, index) => (
           <div key={item.title} className="group">

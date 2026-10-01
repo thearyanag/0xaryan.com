@@ -1,5 +1,5 @@
 import { ScrambleText } from "@/components/scramble-text"
-import { MapPin, Building2 } from "lucide-react"
+import { MapPin, Smile } from "lucide-react"
 
 export function Header() {
   return (
@@ -15,15 +15,15 @@ export function Header() {
           🇮🇳/🇺🇸
         </div>
         <div className="flex items-center gap-2">
-          <Building2 className="w-4 h-4" />
-          operator <a href="https://sendai.fun" target="_blank" rel="noopener noreferrer">@sendai.fun</a>
+          <Smile className="w-4 h-4" />
+          having fun
         </div>
       </div>
       <p className="leading-relaxed animate-fade-in-up">
-        22 y/o. building cool things since 17. i beleive in 
+        23 y/o. building cool things since 17. i beleive in
         increasing the luck surface area, and helping others do the same.
-        i&apos;ve flown drones into air at 19, and satellites into space at 20.
-        now, building at intersection of the two most justifiably hyped fields in tech, crypto x ai.
+        i flew drones into the air at 19, sent satellites into space at 20,
+        and gave ai agents wallets at 22. now, following my curiosity and seeing where it takes me.
       </p>
     </header>
   )

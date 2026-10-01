@@ -9,7 +9,7 @@ const workItems: Item[] = [
     role: "co-founder & cto",
     period: "dec 2024 - sep 2026",
     description:
-      "created solana agent kit and solana mcp. built suzi’s trading and autonomous-agent platform, from the user experience to execution infrastructure.",
+      "created solana agent kit and solana mcp, giving developers the tools to put ai agents onchain. built suzi, where those agents could trade, manage portfolios, and run strategies around the clock.",
     href: "https://sendai.fun",
   }
 ]
@@ -49,7 +49,13 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <SectionList title="work" items={workItems} />
+      <SectionList title="work" items={workItems}>
+        <div className="mb-8">
+          <p className="text-sm text-gray-400 mb-2">currently</p>
+          <p className="text-gray-300">optimising for bakchodi</p>
+        </div>
+        <p className="text-sm text-gray-400 mb-3">previously</p>
+      </SectionList>
       <BlogSection />
       <SectionList
         title="projects"
